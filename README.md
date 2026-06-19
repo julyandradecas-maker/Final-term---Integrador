@@ -8,22 +8,6 @@ conversa con otra persona desde su terminal (cmd, PowerShell, bash...).
 No hay frontend web. Cada persona se identifica con un **PIN único de 8 dígitos**
 (como un número telefónico); para escribirle a alguien necesitas su PIN.
 
-## Arquitectura (dos microservicios + Docker)
-
-```
-        ┌──────────────┐      JWT (incluye el PIN)      ┌──────────────┐
-Cliente │   auth-api   │ ─────────────────────────────▶│   backend    │
- (cmd)  │  FastAPI/Py  │   login / registro / contactos │   Go + WS    │
-        │  SQLite      │                                │  mensajes    │
-        └──────────────┘                                └──────┬───────┘
-                                                                │
-                                                          ┌─────▼─────┐
-                                                          │   Redis   │
-                                                          │ sesiones +│
-                                                          │ offline   │
-                                                          └───────────┘
-```
-
 - **auth-api** (Python / FastAPI): registro, login, perfil y agenda de
   contactos. Guarda usuarios en SQLite y firma un JWT que incluye el PIN.
 - **backend** (Go / Gin + Gorilla WebSocket): chat en tiempo real 1 a 1.
