@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema de gestión de chat 1 a 1
 
 Servidor de mensajería persona‑a‑persona pensado para operar dentro de una red:
@@ -103,3 +104,6 @@ Mensaje que recibe el destinatario:
   "created_at": "2026-06-15T18:00:00Z"
 }
 ```
+=======
+# Final-term---Integrador
+>>>>>>> 2f10add72bf9675732e4605e0fa429cffe8dc7b7
