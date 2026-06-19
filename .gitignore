@@ -9,3 +9,5 @@ auth-api/.venv/
 
 # Variables de entorno
 .env
+
+.claude/
