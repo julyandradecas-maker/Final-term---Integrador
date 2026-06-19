@@ -1,0 +1,11 @@
+# Base de datos SQLite (bind mount local)
+auth-api/data/
+*.db
+
+# Entornos virtuales de Python
+auth-api/venv/
+auth-api/.venv/
+.venv/
+
+# Variables de entorno
+.env

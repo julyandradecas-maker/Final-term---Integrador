@@ -1,0 +1,93 @@
+============================================================
+   CHAT 1 A 1 - INSTRUCCIONES PARA USAR EL CLIENTE
+============================================================
+
+Este programa te permite chatear con otra persona desde tu
+terminal (cmd o PowerShell). No necesitas navegador.
+
+Cada persona tiene un PIN único (como un número de teléfono).
+Para escribirle a alguien necesitas su PIN.
+
+------------------------------------------------------------
+QUE NECESITAS (solo la primera vez)
+------------------------------------------------------------
+
+1) Tener Python 3 instalado.
+   - Descárgalo de: https://python.org
+   - Durante la instalación, marca la casilla
+     "Add Python to PATH".
+
+2) Tener el archivo "client.py" en una carpeta de tu PC.
+
+3) Instalar la librería del cliente. Abre cmd o PowerShell y
+   escribe:
+
+       pip install websocket-client
+
+
+------------------------------------------------------------
+DATOS 
+------------------------------------------------------------
+
+  - IP del servidor .......: ____________________
+    (ejemplo: 192.168.1.10)
+
+  - Puerto FastAPI ........: 8000
+  - Puerto Backend ......: 8080
+
+------------------------------------------------------------
+COMO USARLO
+------------------------------------------------------------
+
+1) Abre cmd o PowerShell en la carpeta donde está client.py.
+   (Truco: abre la carpeta en el explorador, escribe "cmd"
+    en la barra de direcciones y presiona Enter.)
+
+2) Ejecuta:
+
+       python client.py
+
+3) Responde lo que te pregunta:
+
+   - Host del servidor : escribe la IP del servidor
+                         (ej. 192.168.1.10)
+                         servidor mismo.
+   - Puerto FastAPI    : 8000  (Enter)
+   - Puerto backend    : 8080  (Enter)
+
+4) ¿(l)ogin o (r)egistro?
+   - La primera vez escribe:  r   (para registrarte)
+     Te pedirá usuario y contraseña, y te mostrará tu PIN.
+     >>> APUNTA TU PIN <<<  Es tu identificador.
+   - Las siguientes veces escribe:  l   (para iniciar sesión)
+
+5) Te preguntará: "¿A qué PIN quieres escribir?"
+   Escribe el PIN de la persona con la que quieres hablar.
+   (Pídele su PIN antes; o déjalo vacío y usa /to después.)
+
+6) ¡Listo! Ya puedes escribir mensajes y presionar Enter.
+
+------------------------------------------------------------
+COMANDOS DENTRO DEL CHAT
+------------------------------------------------------------
+
+   /to <pin>   Cambia de destinatario.
+               Ejemplo:  /to 98579453
+   /salir      Cierra el chat.
+
+------------------------------------------------------------
+NOTAS
+------------------------------------------------------------
+
+- Si la otra persona está desconectada, tu mensaje se guarda
+  y le llegará cuando vuelva a entrar.
+
+- Si al conectar te da error de conexión, revisa:
+    * que escribiste bien la IP del servidor,
+    * que estás en la misma red que el servidor,
+    * que el servidor está encendido.
+
+- Tu PIN no cambia. Compártelo para que te agreguen y puedan
+  escribirte.
+
+============================================================
